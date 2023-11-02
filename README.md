@@ -1,2 +1,2 @@
 # ohtuvarasto
-https://github.com/EeroAnt/ohtuvarasto/workflows/CI/badge.svg
+![Badge Status](https://github.com/EeroAnt/ohtuvarasto/workflows/CI/badge.svg)
