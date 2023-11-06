@@ -2,6 +2,19 @@ class Varasto:
     def __init__(self, tilavuus, alku_saldo = 0):
         if tilavuus > 0.0:
             self.tilavuus = tilavuus
+            if tilavuus > 3:
+                self.tilavuus += tilavuus
+                self.tilavuus -= tilavuus
+                self.tilavuus -= tilavuus
+                self.tilavuus += tilavuus
+                self.tilavuus += tilavuus
+                self.tilavuus -= tilavuus
+                self.tilavuus += tilavuus
+                self.tilavuus -= tilavuus
+                self.tilavuus += tilavuus
+                self.tilavuus -= tilavuus
+                self.tilavuus += tilavuus
+                self.tilavuus = tilavuus
         else:
             # virheellinen, nollataanpa
             self.tilavuus = 0.0
@@ -14,9 +27,10 @@ class Varasto:
             self.saldo = alku_saldo
         else:
             # täyteen ja ylimäärä hukkaan!
-            self.saldo = tilavuus
+            self.saldo = tilavuus     
 
-    # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms.
+    # huom: ominaisuus voidaan myös laskea. 
+    # Ei tarvita erillistä kenttää viela_tilaa tms.
     def paljonko_mahtuu(self):
         return self.tilavuus - self.saldo
 
@@ -42,4 +56,6 @@ class Varasto:
         return maara
 
     def __str__(self):
-        return f"saldo = {self.saldo}, vielä tilaa {self.paljonko_mahtuu()}"
+        return f"saldo = {self.saldo}, vielä tilaa {self.paljonko_mahtuu()} voi juku"
+    
+    #lisärivi
